@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Movie;
+use App\Model\User;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
