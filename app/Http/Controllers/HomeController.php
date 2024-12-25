@@ -11,11 +11,10 @@ class HomeController extends Controller
 {
     public function index(){
         if(Auth::id()){
-            $usertype = Auth()->user()->usertype;
-            if($usertype == 'user'){
-                // Mengambil data film
-                $movies = Movie::all(); 
-                return view('user.userhome', compact('movies')); // Kirim data ke Blade
+            $usertype=Auth()->user()->usertype;
+            if($usertype=='user'){
+                $movies = Movie::all();
+                return view('user.userhome', compact('movies'));
             }
             else if($usertype == 'admin'){
                 return view('admin.adminhome');
