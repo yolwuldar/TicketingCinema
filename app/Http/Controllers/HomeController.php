@@ -16,11 +16,9 @@ class HomeController extends Controller
                 $movies = Movie::all();
                 return view('user.userhome', compact('movies'));
             }
-
-            else if($usertype=='admin'){
+            else if($usertype == 'admin'){
                 return view('admin.adminhome');
             }
-
             else{
                 return redirect()->route('login');
             }
